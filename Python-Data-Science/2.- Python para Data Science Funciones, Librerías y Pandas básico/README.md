@@ -232,3 +232,176 @@ DS5 220000
 - Formas de iterar una tupla.
 - La técnica conocida como desempaquetado de tuplas.
 - A utilizar la built-in function zip().
+
+<br><br>
+
+# Diccionario
+
+- Los diccionarios son una estructura de datos que almacenan datos en pares de valores. La clave es la llave que se utiliza para acceder al valor.
+- Los diccionarios se crean usando llaves {}. Cada elemento del diccionario es un par de valores, que se separan por dos puntos (:).
+- Hay dos formas principales de crear diccionarios:
+  - Declarando explícitamente las claves y los valores:
+
+```python
+datos = {
+    "nombre": "Alejandro",
+    "edad": 25,
+    "sexo": "masculino"
+}
+
+```
+
+- Usando el método dict():
+
+```python
+datos = dict(nombre="Alejandro", edad=25, sexo="masculino")
+
+```
+
+<br><br>
+
+# Operaciones con Diccionarios
+
+- Para acceder al valor de un elemento de un diccionario, podemos usar el operador de corchetes [ ]. Por ejemplo, para acceder al valor del vehículo Passat, podemos usar el siguiente código:
+
+```python
+print(datos['Passat'])
+
+```
+
+- Para buscar si existe una llave dentro de un diccionario, podemos usar el método in. Por ejemplo, para verificar si existe la llave "Passat" en el diccionario datos, podemos usar el siguiente código:
+
+```python
+print('Passat' in datos)
+```
+
+- Para obtener el tamaño de un diccionario, podemos usar el método len(). Por ejemplo, para obtener el tamaño del diccionario datos, podemos usar el siguiente código:
+
+```python
+print(len(datos))
+```
+
+- Para adicionar un elemento a un diccionario, podemos usar el operador de asignación. Por ejemplo, para adicionar el vehículo "DS5" al diccionario datos, podemos usar el siguiente código:
+
+```python
+datos['DS5'] = 100000
+```
+
+- Para eliminar un elemento de un diccionario, podemos usar el método del. Por ejemplo, para eliminar el vehículo "Passat" del diccionario datos, podemos usar el siguiente código:
+
+```python
+del datos['Passat']
+```
+
+<br><br>
+
+# Metodos con Diccionarios
+
+**update()**: Actualiza o incluye un elemento dentro de un diccionario.
+**copy()**: Crea una copia de un diccionario.
+**pop()**: Elimina un elemento de un diccionario.
+**clear()**: Borra todos los elementos de un diccionario.
+
+**update()**
+
+- Por ejemplo, para actualizar el valor del vehículo Passat de 94 centavos a 95 centavos, podemos usar el siguiente código:
+
+Python
+
+```python
+datos.update({"Passat": 95})
+```
+
+- Para incluir un nuevo vehículo, por ejemplo el Fusca, que vale 150.000, podemos usar el siguiente código:
+
+```python
+datos.update({"Fusca": 150000})
+```
+
+**copy()**
+
+- Esta copia es independiente del diccionario original, lo que significa que podemos modificarla sin afectar al diccionario original.
+
+```python
+datos_copy = datos.copy()
+```
+
+**pop()**
+
+- Para eliminar un elemento de un diccionario, utilizamos el método pop(). Para eliminar el vehículo Passat, podemos usar el siguiente código:
+
+```python
+datos.pop("Passat")
+```
+
+- Si el elemento no existe, se devolverá un error. Para evitar esto, podemos pasar un mensaje como parámetro al método pop(). Por ejemplo, para indicar que la llave no fue encontrada, podemos usar el siguiente código:
+
+```python
+datos.pop("Passat", "Llave no encontrada")
+```
+
+**clear()**
+
+- Para borrar todos los elementos de un diccionario, utilizamos el método clear(). Por ejemplo, para borrar el diccionario datos_copy, podemos usar el siguiente código:
+
+```python
+datos_copy.clear()
+```
+
+<br><br>
+
+# Iterando en diccionarios
+
+El método **keys()** nos devuelve una lista con las llaves del diccionario.
+El método **values()**nos devuelve una lista con los valores del diccionario.
+El método **items()** nos devuelve una lista de tuplas, cada tupla conteniendo una llave y su valor.
+
+Podemos utilizar un bucle for para iterar sobre los elementos de un diccionario, utilizando cualquiera de estos métodos como referencia.
+
+Por ejemplo, para iterar sobre las llaves de un diccionario, podemos usar el siguiente código:
+
+```python
+for llave in diccionario.keys():
+  print(llave)
+```
+
+Para iterar sobre los valores de un diccionario, podemos usar el siguiente código:
+
+```python
+for llave in diccionario.keys():
+  print(llave)
+```
+
+Para iterar sobre las llaves y los valores de un diccionario, podemos usar el siguiente código:
+
+```python
+for llave, valor in diccionario.items():
+  print(llave, valor)
+```
+
+Por ejemplo, para desempacar los elementos de una tupla, podemos usar el siguiente código:
+
+```python
+for key, value in datos.items():
+    print(key, "=", value)
+```
+
+<br>
+
+## En esta aula aprendimos:
+
+- Estructuras de datos, que representan un tipo de mapeo, conocidas como diccionario, en el lenguaje Python.
+- Formas de crear diccionarios en Python.
+- Operaciones básicas con diccionarios (pertinencia, acceso, asignación, etc.).
+- A utilizar los métodos más importantes de diccionarios (update(), pop(), clear(), etc.).
+- Técnicas de iteración en diccionarios.
+
+<br><br>
+
+# Built-in Functions
+
+Las built-in functions son funciones que ya existen dentro del lenguaje Python. No necesitamos crearlas, ya están disponibles, solo tenemos que utilizarlas.
+
+[Built-in Functions]('https://docs.python.org/3/library/functions.html')
+
+<br>
